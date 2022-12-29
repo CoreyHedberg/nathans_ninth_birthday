@@ -2,7 +2,7 @@
 const BIRTHDAY_DATE = new Date("Dec 15, 2023 12:00:00").getTime()
 
 // Update the count down every 1 second
-var x = setInterval(() => {
+var beginCountdown = setInterval(() => {
   // Get today's date and time
   const NOW = new Date().getTime()
 
@@ -17,12 +17,12 @@ var x = setInterval(() => {
 
   // Display the result in the element with id="demo"
   document.getElementById(
-    "demo"
+    "countdown-timer"
   ).innerHTML = `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`
 
   // If the count down is finished, write some text
   if (TIME_LEFT < 0) {
-    clearInterval(x)
-    document.getElementById("demo").innerHTML = `It's party time`
+    clearInterval(beginCountdown)
+    document.getElementById("countdown-timer").innerHTML = `It's party time`
   }
 }, 1000)
