@@ -1,3 +1,5 @@
+// TODO: Clean up countdown code
+// use strict;
 // Set the date we're counting down to
 const BIRTHDAY_DATE = new Date("Dec 15, 2023 12:00:00").getTime()
 
@@ -10,15 +12,17 @@ var beginCountdown = setInterval(() => {
   const TIME_LEFT = BIRTHDAY_DATE - NOW
 
   // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(TIME_LEFT / (1000 * 60 * 60 * 24))
-  var hours = Math.floor((TIME_LEFT % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
-  var minutes = Math.floor((TIME_LEFT % (1000 * 60 * 60)) / (1000 * 60))
-  var seconds = Math.floor((TIME_LEFT % (1000 * 60)) / 1000)
+  const DAYS = Math.floor(TIME_LEFT / (1000 * 60 * 60 * 24))
+  const HOURS = Math.floor(
+    (TIME_LEFT % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  )
+  const MINUTES = Math.floor((TIME_LEFT % (1000 * 60 * 60)) / (1000 * 60))
+  const SECONDS = Math.floor((TIME_LEFT % (1000 * 60)) / 1000)
 
   // Display the result in the element with id="demo"
   document.getElementById(
     "countdown-timer"
-  ).innerHTML = `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`
+  ).innerHTML = `${DAYS} days ${HOURS} hours ${MINUTES} minutes ${SECONDS} seconds`
 
   // If the count down is finished, write some text
   if (TIME_LEFT < 0) {
