@@ -11,7 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./index.css" />
-    <script src="./index.js" defer></script>
+    <script defer src="./index.js"></script>
     <link rel="shortcut icon" href="./images/nine.png" type="image/x-icon" />
     <title>Nathan's 9th Birthday</title>
   </head>
@@ -20,19 +20,20 @@
       <div>It's time to celebrate Nathan's 9th birthday</div>
       <div>Please join us on Nathan's special day!</div>
     </section>
-    <section id="countdown">
+    <section id="birthday-countdown">
       <h3>🎉 The countdown is on ... 🎉</h3>
       <div id="countdown-timer">
-        <div id="days"></div>
-        <div id="hours"></div>
-        <div id="minutes"></div>
-        <div id="seconds"></div>
+        <div id="days" class="countdown-number"></div>
         <div class="countdown-text">days</div>
+        <div id="hours" class="countdown-number"></div>
         <div class="countdown-text">hours</div>
+        <div id="minutes" class="countdown-number"></div>
         <div class="countdown-text">minutes</div>
+        <div id="seconds" class="countdown-number"></div>
         <div class="countdown-text">seconds</div>
       </div>
-      <div id="countdown-timer"></div>
     </section>
+    <!-- TODO: Remove when finished writing what to do when the countdown has completed -->
+    <div id="testing"></div>
   </body>
 </html>
