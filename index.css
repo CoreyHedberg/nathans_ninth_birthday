@@ -56,3 +56,8 @@ body {
 #countdown-header-image {
   font-size: 4em;
 }
+
+footer {
+  margin-top: 20px;
+  font-family: var(--countdown-timer-font);
+}
