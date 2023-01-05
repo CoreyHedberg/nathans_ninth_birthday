@@ -1,6 +1,30 @@
+:root {
+  --countdown-timer-font: "Rowdies", cursive;
+  --primary-font: "Permanent Marker", cursive;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+  background: #16222a;
+  background: -webkit-linear-gradient(to right, #3a6073, #16222a);
+  background: linear-gradient(to right, #3a6073, #16222a);
+}
+
 #header {
-  font-family: "Permanent Marker", cursive;
+  font-family: var(--primary-font);
   font-size: 4rem;
+}
+
+#birthday-countdown {
+  font-family: var(--countdown-timer-font);
 }
 
 .container {
@@ -8,22 +32,27 @@
   grid-template-columns: repeat(4, 20em);
   grid-template-rows: repeat(2, auto);
   grid-gap: 5px;
-  border: 1px dashed red;
+  justify-content: center;
 }
 
 .container > div {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid yellow;
 }
 
 .countdown-number {
-  font-family: "Press Start 2P", cursive;
-  font-size: 8rem;
+  font-size: 5rem;
 }
 
 .countdown-text {
-  font-family: "Permanent Marker", cursive;
-  font-size: 4rem;
+  font-size: 2em;
+}
+
+#countdown-header-text {
+  font-size: 3em;
+}
+
+#countdown-header-image {
+  font-size: 4em;
 }

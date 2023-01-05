@@ -9,8 +9,7 @@ function countdownToBirthday() {
   const TIME_LEFT = BIRTHDAY_DATE - NOW
   // Addressing what to do when the countdown reaches 0
   if (TIME_LEFT < 0) {
-    clearInterval(countdownToBirthday)
-    document.getElementById("testing").innerHTML = `It's party time`
+    countdownToBirthdayCompleted()
   }
   // Time calculations for days, hours, minutes and seconds
   const DAYS = Math.floor(TIME_LEFT / (1000 * 60 * 60 * 24))
@@ -26,6 +25,11 @@ function countdownToBirthday() {
   document.getElementById("seconds").innerHTML = SECONDS
 }
 
+function countdownToBirthdayCompleted() {
+  clearInterval(countdownToBirthday)
+  document.getElementById("birthday-countdown").style.display = "none"
+  return
+}
 // Initialize the function
 countdownToBirthday()
 // Set the count down function to run every 1 second
